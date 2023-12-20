@@ -3,7 +3,7 @@ Teleport randomly
 
 ## How to use
 
-Add the plugin to plugins and start your server!
+Add the plugin to `plugins` and start your server!
 
 You can customize the command name, aliases, messages, and range in config.yml. The permission for this command is rtp.cmd.
 
