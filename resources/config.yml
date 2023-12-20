@@ -1,0 +1,22 @@
+command:
+  name: "randomteleport"
+  aliases:
+    - "rtp"
+    - "randomtp"
+  description: "Teleport randomly"
+  usage_message: "/rtp"
+
+  #permission name is rtp.cmd
+
+messages:
+  no_permission: "§cYou don't have the permission to use this command !"
+  success: "§aSauccesfully teleported §b{x} §b{y} §b{z}"
+  not_player: "§cYou have to be a player to use this command !"
+
+range:
+  x: #or [0, 100]
+    - 0
+    - 100
+  z: #or [0, 100]
+    - 0
+    - 100
