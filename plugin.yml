@@ -5,5 +5,5 @@ main: ShadowMikado\RandomTeleport\Main
 version: 1.O.O
 
 permissions:
-  rtp.cmd:
+  randomteleport.cmd:
     default: op
