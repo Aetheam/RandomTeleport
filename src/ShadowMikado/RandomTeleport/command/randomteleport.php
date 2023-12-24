@@ -14,13 +14,13 @@ class randomteleport extends Command
     public function __construct()
     {
         parent::__construct(Main::$config->getNested("command.name"), Main::$config->getNested("command.description"), Main::$config->getNested("command.usage_message"), Main::$config->getNested("command.aliases"));
-        $this->setPermission("rtp.cmd");
+        $this->setPermission("randomteleport.cmd");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
     {
 
-        if (!$sender->hasPermission("rtp.cmd")) {
+        if (!$sender->hasPermission("randomteleport.cmd")) {
             $sender->sendMessage(Main::$config->getNested("messages.no_permission"));
             return;
         }
