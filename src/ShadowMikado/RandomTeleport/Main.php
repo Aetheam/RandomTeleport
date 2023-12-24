@@ -16,21 +16,13 @@ class Main extends PluginBase
 
     protected function onLoad(): void
     {
-        $this->getLogger()->info("Loading...");
         self::setInstance($this);
     }
 
     protected function onEnable(): void
     {
-        $this->getLogger()->info("Enabling...");
         $this->saveDefaultConfig();
         self::$config = $this->getConfig();
         $this->getServer()->getCommandMap()->register("", new randomteleport());
     }
-
-    protected function onDisable(): void
-    {
-        $this->getLogger()->info("Disabling...");
-    }
-
 }
