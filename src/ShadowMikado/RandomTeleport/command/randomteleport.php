@@ -6,13 +6,20 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\math\Vector3;
 use pocketmine\player\Player;
+use pocketmine\plugin\PluginOwned;
+use pocketmine\plugin\PluginOwnedTrait;
 use ShadowMikado\RandomTeleport\Main;
 
-class randomteleport extends Command
-{
+class randomteleport extends Command implements PluginOwned
 
-    public function __construct()
+{
+    use PluginOwnedTrait {
+        __construct as setOwningPlugin;
+    }
+
+    public function __construct(private readonly Main $plugin)
     {
+        $this->setOwningPlugin($plugin);
         parent::__construct(Main::$config->getNested("command.name"), Main::$config->getNested("command.description"), Main::$config->getNested("command.usage_message"), Main::$config->getNested("command.aliases"));
         $this->setPermission("randomteleport.cmd");
     }

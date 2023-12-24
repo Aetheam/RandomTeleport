@@ -23,6 +23,6 @@ class Main extends PluginBase
     {
         $this->saveDefaultConfig();
         self::$config = $this->getConfig();
-        $this->getServer()->getCommandMap()->register("", new randomteleport());
+        $this->getServer()->getCommandMap()->register($this->getName(), new randomteleport($this));
     }
 }
